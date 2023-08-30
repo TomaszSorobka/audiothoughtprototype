@@ -7,7 +7,7 @@ from audio_recorder_streamlit import audio_recorder
 import time
 
 # Load variables from .env file into the environment
-load_dotenv()
+#load_dotenv()
 api_key = st.secrets["API_KEY"]#os.getenv("API_KEY")
 col1, col2, col3 = st.columns(3)
 
