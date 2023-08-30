@@ -3,3 +3,4 @@ whisper/*
 __pycache__/
 Scripts
 Lib
+.env

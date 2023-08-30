@@ -3,7 +3,7 @@ from io import BytesIO
 import tempfile
 import os
 import streamlit as st
-
+import time
 # Create a function to transcribe audio using Whisper
 def transcribe_audio(api_key, audio_file):
     openai.api_key = api_key
@@ -108,3 +108,12 @@ def generate_images(api_key, prompt, n=4):
     )
 
     return response['data']
+
+def count_down(ts):
+    with st.empty():
+        while ts:
+            mins, secs = divmod(ts, 60)
+            time_now = '{:02d}:{:02d}'.format(mins, secs)
+            st.header(f"{time_now}")
+            time.sleep(1)
+            ts -= 1
