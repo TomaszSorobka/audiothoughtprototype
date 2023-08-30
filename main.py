@@ -1,8 +1,6 @@
-import threading
 import streamlit as st
 from utils import transcribe_audio, summarize_transcript, count_down
 
-from dotenv import load_dotenv
 from audio_recorder_streamlit import audio_recorder
 import time
 
