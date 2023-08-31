@@ -4,8 +4,8 @@ import theme
 from audio_recorder_streamlit import audio_recorder
 import time
 
-import os
-import dotenv
+# import os
+# import dotenv
 custom_prompt = '''Summarize the following audio using an every day simple language, using the 1st person (never use the 3rd person) and most importantly keep it short (no longer than half of the length of the transcription):'''
 
 def initialize_session_state():
@@ -16,8 +16,8 @@ def initialize_session_state():
 
 initialize_session_state()
 # Load variables from .env file into the environment
-dotenv.load_dotenv()
-api_key = os.getenv("API_KEY")#st.secrets["API_KEY"]
+#dotenv.load_dotenv() os.getenv("API_KEY")
+api_key = st.secrets["API_KEY"]
 
 # Streamlit app
 st.set_page_config(**theme.page_config)
