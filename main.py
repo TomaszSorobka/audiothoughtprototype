@@ -36,10 +36,9 @@ title = """
     <h1 style="color:#eb5266; font-family:sans-serif;">🎙️AudioThought Prototype: Audio Transcription and Summarization 🎙️</h1>
 """
 st.markdown(title, unsafe_allow_html=True)
-url = 'https://www.loom.com/share/03aec25952e146cb9f870efec92bdc01'
 
-if st.button('See a tutorial'):
-    webbrowser.open_new_tab(url)
+linkTutorial = '[See a tutorial](https://www.loom.com/share/03aec25952e146cb9f870efec92bdc01)'
+st.markdown(linkTutorial, unsafe_allow_html=True)
 
 guide = '''
 <h4>Please allow for the use of microphone!</h4>
