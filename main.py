@@ -1,3 +1,4 @@
+import webbrowser
 import streamlit as st
 from utils import transcribe_audio, summarize_transcript, count_down
 import theme
@@ -35,6 +36,11 @@ title = """
     <h1 style="color:#eb5266; font-family:sans-serif;">🎙️AudioThought Prototype: Audio Transcription and Summarization 🎙️</h1>
 """
 st.markdown(title, unsafe_allow_html=True)
+url = 'https://www.loom.com/share/03aec25952e146cb9f870efec92bdc01'
+
+if st.button('See a tutorial'):
+    webbrowser.open_new_tab(url)
+
 guide = '''
 <h4>Please allow for the use of microphone!</h4>
 1. Press the grey microphone below to start recording <br>  2. Speak your thoughts (max. 3 minutes) <br> 3. Press the red microphone icon to stop recording <br> 4. Wait for the summary to generate! <br><br>
