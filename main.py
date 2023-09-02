@@ -37,7 +37,7 @@ title = """
 st.markdown(title, unsafe_allow_html=True)
 guide = '''
 <h4>Please allow for the use of microphone!</h4>
-1. Press the grey microphone below to start recording <br>  2. Speak your thoughts (max. 2 minutes) <br> 3. Press the red microphone icon to stop recording <br> 4. Wait for the summary to generate! <br><br>
+1. Press the grey microphone below to start recording <br>  2. Speak your thoughts (max. 3 minutes) <br> 3. Press the red microphone icon to stop recording <br> 4. Wait for the summary to generate! <br><br>
 '''
 st.write(guide, unsafe_allow_html=True)
 
@@ -47,7 +47,7 @@ model = "gpt-3.5-turbo"#st.selectbox("Select a model:", models)
 
 
 
-audio_bytes = audio_recorder(text = "Click to start/stop recording->", neutral_color="#808080",icon_size="8x",  energy_threshold=(-1.0, 1.0), pause_threshold=120.0, key="Record")
+audio_bytes = audio_recorder(text = "Click to start/stop recording->", neutral_color="#808080",icon_size="8x",  energy_threshold=(-1.0, 1.0), pause_threshold=180.0, key="Record")
 
 #uploaded_audio = st.file_uploader("Upload an audio file", type=['m4a', 'mp3', 'webm', 'mp4', 'mpga', 'wav', 'mpeg'], accept_multiple_files=False)
 if st.session_state.timesUsed <= 10:
